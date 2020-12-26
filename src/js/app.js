@@ -1,5 +1,3 @@
-"use strict";
-
 import Glide from "@glidejs/glide";
 
 const installMap = () => {
