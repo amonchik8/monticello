@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     gap: 30,
     autoplay: 4000,
     breakpoints: {
-      1024: {
+      1280: {
         perView: 2
       },
       600: {
@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     type: "carousel",
     startAt: 0,
     perView: 1,
+    autoplay: 4000,
   }).mount();
 
   installMap();

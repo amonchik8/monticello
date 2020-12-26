@@ -1,5 +1,11 @@
 .logo {
-    margin-right: 110px;
+    margin-bottom: 30px;
+    @include media(576px) {
+        margin-right: 110px;
+    }
+    @include media(525px) {
+        margin-bottom: 0;
+    }
     &__icon {
         width: 241px;
         height: 54px;

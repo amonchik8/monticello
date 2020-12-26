@@ -1,4 +1,7 @@
 .navigation {
-    @include flex(center, center, row);
-    // margin-bottom: 260px;
+    @include flex(center, center, column);
+    width: 100%;
+    @include media(525px) {
+        @include flex(space-between, stretch, row);
+    }
 }

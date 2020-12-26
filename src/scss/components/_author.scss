@@ -2,10 +2,17 @@
     @include text($H16, 400, $WHITE);
     font-family: $SECONDARY-FONT;
     line-height: 1.5;
+    text-align: center;
+    @include media(387px) {
+        text-align: left;
+    }
     &__product {
         position: relative;
         &:after {
-            content: "|";
+            @include media(387px) {
+                content: "|";
+            }
+            content: "";
             font-size: 20px;
             font-weight: 100;
             position: absolute;
@@ -14,6 +21,9 @@
             right: -27px;
             top: -5px;
           }
-        margin-right: 40px;
+          @include media(387px) {
+              margin-right: 40px;
+          }
+        margin-right: 0;
     }
 }

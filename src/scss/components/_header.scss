@@ -21,7 +21,13 @@
     }
     &__title {
         text-align: center;
-        @include text($H80, 700, $WHITE);
+        @include text($H40, 700, $WHITE);
+        @include media(425px) {
+            @include text($H60, 700, $WHITE);
+        }
+        @include media(525px) {
+            @include text($H80, 700, $WHITE);
+        }
         text-transform: uppercase;
         letter-spacing: 4px;
         margin-bottom: 40px;

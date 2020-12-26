@@ -1,5 +1,8 @@
 .title {
-    @include text($H44, 700, $BASE-FONT-COLOR);
+    @include text($H32, 700, $BASE-FONT-COLOR);
+    @include media(420px) {
+        @include text($H44, 700, $BASE-FONT-COLOR);
+    }
     text-transform: uppercase;
     display: inline-flex;
     position: relative;
