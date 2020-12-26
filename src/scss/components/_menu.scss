@@ -1,0 +1,34 @@
+.menu {
+    font-family: $SECONDARY-FONT;
+    &__item {
+        @include text($H14, 400, $WHITE);
+        display: inline;
+        margin-right: 88px;
+        &:nth-child(3) {
+            margin-right: 120px;
+        }
+        &:last-child {
+            margin-right: 80px;
+        }
+    }
+    &__link {
+        display: inline-flex;
+        position: relative;
+        color: $WHITE;
+        text-decoration: none;
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            @include size(9px);
+            border-radius: 50%;
+            border: 1px solid $WHITE;
+            top: 4px;
+            left: -20px;
+            transition: background-color 0.4s ease;
+        }
+        &:hover:after {
+            background-color: $WHITE;
+        }
+    }
+}

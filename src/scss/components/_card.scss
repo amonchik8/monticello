@@ -1,0 +1,67 @@
+.card {
+  background-color: $WHITE;
+  @include hover {
+    .card__hover {
+      opacity: 1;
+    }
+  }
+  &__image {
+    position: relative;
+    z-index: 1;
+  }
+  &__hover {
+    position: absolute;
+    @include size(80px);
+    border: 1px solid $WHITE;
+    border-radius: 50%;
+    top: 15%;
+    left: 30.8%;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    &:after {
+      content: "+";
+      font-size: 40px;
+      position: absolute;
+      display: block;
+      color: $WHITE;
+      top: 15px;
+      right: 27px;
+    }
+  }
+  &__inner {
+    padding: 30px 30px 30px 20px;
+  }
+  &__title {
+    @include text($H22, 700, $TITLE-COLOR);
+    font-family: $BASE-FONT;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  &__description {
+    @include text($H18, 400, $BASE-FONT-COLOR);
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.6;
+  }
+  &__avatar-inner {
+    @include flex(flex-start, center, row);
+    margin-top: 35px;
+  }
+  &__avatar-image {
+    margin-right: 20px;
+  }
+  &__avatar-wrapper {
+    @include flex(flex-start, flex-start, column);
+  }
+  &__avatar-name {
+    @include text($H18, 400, $TITLE-COLOR);
+    font-family: $SECONDARY-FONT;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  &__avatar-date {
+    @include text($H14, 400, $BLUE);
+    font-family: $SECONDARY-FONT;
+  }
+}

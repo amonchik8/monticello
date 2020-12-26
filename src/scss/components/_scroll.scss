@@ -1,0 +1,24 @@
+.scroll {
+    @include size(40px);
+    border: 1px solid;
+    border-radius: 50%;
+    @include flex(center, center, row);
+    &__down {
+        @include size(6px);
+        border-right: 1px solid;
+        border-bottom: 1px solid;
+        transform: rotate(45deg);
+    }
+    &__left {
+        @include size(6px);
+        border-left: 1px solid;
+        border-bottom: 1px solid;
+        transform: rotate(45deg);
+    }
+    &__right {
+        @include size(6px);
+        border-right: 1px solid;
+        border-top: 1px solid;
+        transform: rotate(45deg);
+    }
+}

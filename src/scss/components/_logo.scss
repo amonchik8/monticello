@@ -1,0 +1,12 @@
+.logo {
+    margin-right: 110px;
+    &__icon {
+        width: 241px;
+        height: 54px;
+        fill: $WHITE;
+        @include hover {
+            fill: $BLUE;
+        }
+        transition: fill 0.4s ease;
+    }
+}

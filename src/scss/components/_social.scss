@@ -1,0 +1,27 @@
+.social {
+  @include flex(center, center, row);
+  &__item {
+    @include size(40px);
+    border: 1px solid;
+    border-radius: 50%;
+    @include flex(center, center, row);
+    color: $WHITE;
+    transition: color 0.4s ease;
+    @include hover {
+      color: $BLUE;
+      .social__icon {
+        color: $BLUE;
+      }
+    }
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  &__icon {
+    @include text($H16, 400, $WHITE);
+    transition: color 0.4s ease;
+    @include flex(center, center);
+    height: 100%;
+    width: 100%;
+  }
+}

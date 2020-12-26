@@ -1,0 +1,36 @@
+@import './core/vars';
+@import './core/mixins';
+@import './core/common';
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+@import url('../assets/fonts/GothamBook/font.css');
+@import url('../assets/fonts/Gotham/stylesheet.css');
+
+@import './components/header';
+@import './components/container';
+@import './components/navigation';
+@import './components/menu';
+@import './components/social';
+@import './components/logo';
+@import './components/scroll';
+@import './components/header-glide';
+@import './components/anchor';
+
+
+@import './components/what-we-do';
+@import './components/block';
+@import './components/button';
+@import './components/title';
+
+@import './components/news';
+@import './components/card';
+@import './components/glide';
+
+@import './components/gallery';
+@import './components/grid';
+
+@import './components/map';
+@import './components/contacts';
+@import './components/form';
+@import './components/footer';
+@import './components/author';

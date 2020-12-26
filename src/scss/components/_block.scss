@@ -1,0 +1,47 @@
+.block {
+    @include flex(center, center, row);
+    &:not(:last-child) {
+      margin-bottom: 140px;
+    }
+  &__image {
+    width: 630px;
+    height: 470px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    &:nth-child(odd) {
+        background-image: url('../assets/images/whatwedoTradeCentreImage.png');
+        margin-right: 70px;
+    }
+    &:nth-child(even) {
+        background-image: url('../assets/images/whatwedoComerceCentreImage.png');
+        margin-left: 70px;
+    }
+  }
+  &__subtitle {
+    @include text($H22, 400, $TITLE-COLOR);
+    text-transform: uppercase;
+    font-family: $SECONDARY-FONT;
+  }
+  &__title {
+    @include text($H44, 700, $TITLE-COLOR);
+    text-transform: uppercase;
+    font-family: $BASE-FONT;
+    margin-bottom: 40px;
+  }
+  &__description {
+    @include text($H18, 400, $BASE-FONT-COLOR);
+    font-family: 'Open Sans', sans-serif;
+    max-width: 456px;
+    margin-bottom: 35px;
+    line-height: 1.6;
+  }
+  &__link {
+    @include text($H18, 300, $TITLE-COLOR);
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+  }
+  &__icon {
+      margin-right: 10px;
+  }
+}

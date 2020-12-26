@@ -1,0 +1,18 @@
+.news {
+    background-image: url('../assets/images/newsBackGround.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include flex(center, center, column);
+    &__container {
+        padding: 140px 24px 210px;
+    }
+    &__title {
+        margin-bottom: 100px;
+        color: $WHITE;
+        @include flex(center, center, column);
+        &:after {
+            color: $WHITE;
+        }
+    }
+}

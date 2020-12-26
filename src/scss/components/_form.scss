@@ -1,0 +1,27 @@
+.form {
+  @include flex(center, stretch, column);
+  max-width: 310px;
+  width: 100%;
+  &__input {
+      height: 40px;
+      margin-bottom: 20px;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid $TITLE-COLOR;
+      padding-left: 2px;
+      @include placeholder {
+          @include text($H18, 400, $TITLE-COLOR);
+          font-family: $SECONDARY-FONT;
+          line-height: 1.2;
+      }
+  }
+  &__button {
+      width: 100%;
+      align-self: flex-end;
+      margin-top: 20px;
+      margin-bottom: 0;
+      @include media {
+          width: 140px;
+      }
+  }
+}

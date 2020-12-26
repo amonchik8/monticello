@@ -1,0 +1,45 @@
+.header {
+    background-image: url('../assets/images/headerBackGround.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: $WHITE;
+    @include flex(flex-start, center, column);
+    &__container {
+        padding: 50px 24px;
+        flex-grow: 1;
+        @include flex(space-between, center, column);
+        &--scroll {
+            @include flex(flex-end, flex-end, column);
+        }
+    }
+    &__title-wrapper {
+        @include media(1025px) {
+            display: none;
+        }
+    }
+    &__title {
+        text-align: center;
+        @include text($H80, 700, $WHITE);
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        margin-bottom: 40px;
+        font-family: $BASE-FONT;
+    }
+    &__subtitle {
+        text-align: center;
+        @include text($H18, 400, $WHITE);
+        text-transform: uppercase;
+        letter-spacing: 5.4px;
+        font-family: $SECONDARY-FONT;
+    }
+    &__scroll {
+        color: $WHITE;
+        text-decoration: none;
+        transition: color 0.4s ease;
+        @include hover {
+            color: $BLACK;
+        }
+    }
+}

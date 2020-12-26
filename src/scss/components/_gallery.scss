@@ -1,0 +1,13 @@
+.gallery {
+    @include flex(center, center, column);
+    &__container {
+        @include flex(center, center, column);
+        padding: 140px 24px;
+    }
+    &__title {
+        margin-bottom: 100px;
+    }
+    &__button {
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,25 @@
+.what-we-do {
+    position: relative;
+    @include flex(center, center, column);
+  // &__wallpaper {
+  //   position: absolute;
+  //   width: 585px;
+  //   height: 470px;
+  //   z-index: -1;
+  //   // &:nth-child(1) {
+  //   //   left: 0;
+  //   //   background-color: $BLUE;
+  //   // }
+  //   // &:nth-child(2) {
+  //   //   right: 0;
+  //   //   background-color: $PURPLE;
+  //   // }
+  // }
+  &__container {
+      padding: 140px 24px 140px;
+      @include flex(center, center, column);
+  }
+  &__title {
+      margin-bottom: 90px;
+  }
+}

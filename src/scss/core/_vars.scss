@@ -1,0 +1,27 @@
+//Colors
+$WHITE: #fff;
+$BLACK: #000;
+$BLUE: #55b7ff;
+$PURPLE: #7e5aff;
+$TITLE-COLOR: #2c4058;
+$BASE-FONT-COLOR: #4b5562;
+
+// Fonts
+
+$BASE-FONT: 'Gotham';
+$SECONDARY-FONT: 'GothamBook';
+$base-font-size: 16px;
+
+//Font Sizes
+@function calcRem($size) {
+    $remSize: $size / $base-font-size;
+    @return #{$remSize}rem;
+}
+
+$H80: calcRem(80px);
+$H44: calcRem(44px); 
+$H22: calcRem(22px);
+$H20: calcRem(20px);
+$H18: calcRem(18px);
+$H16: calcRem(16px);
+$H14: calcRem(14px);
