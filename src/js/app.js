@@ -1,6 +1,11 @@
 import Glide from "@glidejs/glide";
 
 const installMap = () => {
+  if (window.matchMedia("(min-width: 400px)").matches) {
+    /* the viewport is at least 400 pixels wide */
+  } else {
+    /* the viewport is less than 400 pixels wide */
+  }
   const mymap = L.map("mapid").setView([40.6636, -73.8895], 13);
 
   L.tileLayer(
@@ -43,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
       1280: {
         perView: 2
       },
-      600: {
+      1024: {
         perView: 1
       }
     }

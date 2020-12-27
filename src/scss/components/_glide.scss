@@ -51,12 +51,21 @@
   &__arrow {
     position: absolute;
     display: block;
-    top: 47%;
+    top: 35%;
+    background-color: $WHITE;
+    @include media {
+      top: 47%;
+      background-color: transparent;
+      color: white;
+      margin: 0 0;
+      @include size(40px)
+    }
     z-index: 2;
-    color: white;
+    color: $TITLE-COLOR;
+    margin: 0 10px;
     cursor: pointer;
     transform: translateY(-50%);
-    @include size(40px);
+    @include size(64px);
     border: 1px solid;
     border-radius: 50%;
     @include flex(center, center, row);
@@ -77,14 +86,28 @@
   &__arrow:focus {
     outline: none;
   }
-  &__arrow:hover {
-    border-color: white;
+  &__arrow {
+    @include hover {
+      border-color: $WHITE;
+    }
   }
   &__arrow--left {
-    left: -8em;
+    left: 0;
+    @include media(600px) {
+      left: -6em;
+  }
+    @include media {
+      left: -7em;
+    }
   }
   &__arrow--right {
-    right: -8em;
+    right: 0;
+    @include media(600px) {
+      right: -6em;
+  }
+    @include media {
+      right: -7em;
+    }
   }
   &__arrow--disabled {
     opacity: 0.33;
@@ -109,12 +132,15 @@
     cursor: pointer;
     line-height: 0;
     box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
-    margin: 0 25px
+    margin: 0 25px;
+    @include hover {
+    border: 2px solid white;
+    background-color:$WHITE;
+    }
   }
   &__bullet:focus {
     outline: none;
   }
-  &__bullet:hover,
   &__bullet:focus {
     border: 2px solid white;
     background-color:$WHITE;

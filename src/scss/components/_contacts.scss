@@ -1,9 +1,11 @@
 .contacts {
     position: absolute;
-    top: -64%;
+    @include media(736px) {
+        top: -64%;
+    }
+    top: -44%;
     z-index: 10;
     background-color: $WHITE;
-    box-shadow: 0 -4px 30px rgba(133, 133, 133, 0.2);
     max-width: 770px;
     width: 100%;
     opacity: 0.9;

@@ -1,15 +1,18 @@
 .what-we-do {
-    position: relative;
-    z-index: 20;
-    @include flex(center, center, column);
+  position: relative;
+  z-index: 20;
+  @include flex(center, center, column);
   &__container {
+    @include media {
       padding: 140px 24px 140px;
-      @include flex(center, center, column);
+    }
+    padding: 100px 24px 100px;
+    @include flex(center, center, column);
   }
   &__title {
-      margin-bottom: 40px;
-      @include media {
-        margin-bottom: 170px;
-      }
+    margin-bottom: 40px;
+    @include media {
+      margin-bottom: 170px;
+    }
   }
 }

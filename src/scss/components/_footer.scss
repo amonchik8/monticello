@@ -7,16 +7,19 @@
     background-size: cover;
     @include flex(center, center, column);
     &__container {
-        @include media(352px) {
-            padding: 400px 24px 210px;
+        @include media(357px) {
+            padding: 520px 24px 150px;
         }
-        @include media(470px) {
-            padding: 330px 24px 210px;
+        @include media(426px) {
+            padding: 460px 24px 170px;
+        }
+        @include media(570px) {
+            padding: 450px 24px 190px;
         }
         @include media(736px) {
             padding: 200px 24px 210px;
         }
-        padding: 410px 24px 210px;
+        padding: 570px 24px 120px;
         max-width: 772px;
         width: 100%;
     }

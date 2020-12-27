@@ -112,7 +112,7 @@
     @include text($H18, 300, $TITLE-COLOR);
     font-family: "Open Sans", sans-serif;
     font-style: italic;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     @include media {
       margin-bottom: 0;
     }
