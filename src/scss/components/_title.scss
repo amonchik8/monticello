@@ -1,20 +1,20 @@
 .title {
-    @include text($H32, 700, $BASE-FONT-COLOR);
-    @include media(420px) {
-        @include text($H44, 700, $BASE-FONT-COLOR);
-    }
-    text-transform: uppercase;
-    display: inline-flex;
-    position: relative;
-    justify-content: center;
-    font-family: $BASE-FONT;
-    &:after {
-        content: '';
-        position: absolute;
-        display: block;
-        width: 100px;
-        color: $BASE-FONT-COLOR;
-        border: 1px solid;
-        top: -40px;
-    }
+  @include text($H32, 700, $BASE-FONT-COLOR);
+  @include media(420px) {
+    @include text($H44, 700, $BASE-FONT-COLOR);
+  }
+  text-transform: uppercase;
+  display: inline-flex;
+  position: relative;
+  justify-content: center;
+  font-family: $BASE-FONT;
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100px;
+    color: $BASE-FONT-COLOR;
+    border: 1px solid;
+    top: -40px;
+  }
 }

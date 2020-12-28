@@ -1,33 +1,33 @@
 .news {
-    background-image: url('../assets/images/newsBackGround.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("../assets/images/newsBackGround.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include flex(center, center, column);
+  &__container {
+    padding: 140px 24px 210px;
+    max-width: 302px;
+    text-align: center;
+    @include media(450px) {
+      max-width: 402px;
+    }
+    @include media(600px) {
+      max-width: 418px;
+    }
+    @include media {
+      text-align: left;
+      max-width: 818px;
+    }
+    @include media(1280px) {
+      max-width: 1218px;
+    }
+  }
+  &__title {
+    margin-bottom: 100px;
+    color: $WHITE;
     @include flex(center, center, column);
-    &__container {
-        padding: 140px 24px 210px;
-        max-width: 302px;
-        text-align: center;
-        @include media(450px) {
-            max-width: 402px;
-        }
-        @include media(600px) {
-            max-width: 418px;
-        }
-        @include media {
-            text-align: left;
-            max-width: 818px;
-        }
-        @include media(1280px) {
-            max-width: 1218px;
-        }
+    &:after {
+      color: $WHITE;
     }
-    &__title {
-        margin-bottom: 100px;
-        color: $WHITE;
-        @include flex(center, center, column);
-        &:after {
-            color: $WHITE;
-        }
-    }
+  }
 }

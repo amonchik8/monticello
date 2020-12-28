@@ -1,7 +1,7 @@
 .navigation {
-    @include flex(center, center, column);
-    width: 100%;
-    @include media(525px) {
-        @include flex(space-between, stretch, row);
-    }
+  @include flex(center, center, column);
+  width: 100%;
+  @include media(525px) {
+    @include flex(space-between, stretch, row);
+  }
 }

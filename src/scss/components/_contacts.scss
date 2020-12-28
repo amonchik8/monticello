@@ -1,47 +1,45 @@
 .contacts {
-    position: absolute;
+  position: absolute;
+  top: -44%;
+  z-index: 10;
+  background-color: $WHITE;
+  max-width: 770px;
+  width: 100%;
+  opacity: 0.9;
+  @include flex(center, stretch, column);
+  text-align: center;
+  @include media(736px) {
+    text-align: left;
+    top: -64%;
+  }
+  padding: 90px 60px 80px 60px;
+  &__title {
+    @include text($H44, 500, $TITLE-COLOR);
+    font-family: $BASE-FONT;
+    margin-bottom: 60px;
+  }
+  &__main {
+    @include flex(center, flex-start, row, wrap);
     @include media(736px) {
-        top: -64%;
+      @include flex(space-between, flex-start, row, wrap);
     }
-    top: -44%;
-    z-index: 10;
-    background-color: $WHITE;
-    max-width: 770px;
-    width: 100%;
-    opacity: 0.9;
-    @include flex(center, stretch, column);
-    text-align: center;
+  }
+  &__list {
+    margin-bottom: 30px;
     @include media(736px) {
-        text-align: left;
+      margin-bottom: 0;
     }
-    padding: 90px 60px 80px 60px;
-    &__title {
-        @include text($H44, 500, $TITLE-COLOR);
-        font-family: $BASE-FONT;
-        margin-bottom: 60px;
+  }
+  &__item {
+    @include text($H18, 400, $TITLE-COLOR);
+    font-family: $SECONDARY-FONT;
+    line-height: 1.8;
+    &:not(:last-child) {
+      margin-bottom: 20px;
     }
-    &__main {
-        @include flex(center, flex-start, row, wrap);
-        @include media(736px) {
-            @include flex(space-between, flex-start, row, wrap);
-        }
-    }
-    &__list {
-        margin-bottom: 30px;
-        @include media(736px) {
-            margin-bottom: 0;
-        }
-    }
-    &__item {
-        @include text($H18, 400, $TITLE-COLOR);
-        font-family: $SECONDARY-FONT;
-        line-height: 1.8;
-        &:not(:last-child) {
-            margin-bottom: 20px;
-        }
-    }
-    &__icon {
-        margin-right: 10px;
-        color: $PURPLE;
-    }
+  }
+  &__icon {
+    margin-right: 10px;
+    color: $PURPLE;
+  }
 }

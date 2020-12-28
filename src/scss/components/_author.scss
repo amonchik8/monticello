@@ -1,29 +1,29 @@
 .author {
-    @include text($H16, 400, $WHITE);
-    font-family: $SECONDARY-FONT;
-    line-height: 1.5;
-    text-align: center;
+  @include text($H16, 400, $WHITE);
+  font-family: $SECONDARY-FONT;
+  line-height: 1.5;
+  text-align: center;
+  @include media(387px) {
+    text-align: left;
+  }
+  &__product {
+    position: relative;
+    &:after {
+      @include media(387px) {
+        content: "|";
+      }
+      content: "";
+      font-size: 20px;
+      font-weight: 100;
+      position: absolute;
+      display: block;
+      color: $WHITE;
+      right: -27px;
+      top: -5px;
+    }
     @include media(387px) {
-        text-align: left;
+      margin-right: 40px;
     }
-    &__product {
-        position: relative;
-        &:after {
-            @include media(387px) {
-                content: "|";
-            }
-            content: "";
-            font-size: 20px;
-            font-weight: 100;
-            position: absolute;
-            display: block;
-            color: $WHITE;
-            right: -27px;
-            top: -5px;
-          }
-          @include media(387px) {
-              margin-right: 40px;
-          }
-        margin-right: 0;
-    }
+    margin-right: 0;
+  }
 }

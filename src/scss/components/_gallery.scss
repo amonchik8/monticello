@@ -1,16 +1,16 @@
 .gallery {
+  @include flex(center, center, column, wrap);
+  &__container {
     @include flex(center, center, column, wrap);
-    &__container {
-        @include flex(center, center, column, wrap);
-        padding: 140px 24px;
+    padding: 140px 24px;
+  }
+  &__title {
+    margin-bottom: 50px;
+    @include media(420px) {
+      margin-bottom: 100px;
     }
-    &__title {
-        margin-bottom: 50px;
-        @include media(420px) {
-            margin-bottom: 100px;
-        }
-    }
-    &__button {
-        margin-bottom: 0;
-    }
+  }
+  &__button {
+    margin-bottom: 0;
+  }
 }

@@ -17,6 +17,9 @@
     object-fit: cover;
     width: 100%;
     height: auto;
+    @include hover {
+      cursor: pointer;
+    }
     @include media {
       &:nth-child(1) {
         grid-area: item-1;
