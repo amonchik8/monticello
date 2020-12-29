@@ -6,21 +6,10 @@
   @include flex(center, center, column);
   &__container {
     padding: 140px 24px 210px;
-    // max-width: 302px;
-    // text-align: center;
-    // @include media(450px) {
-    //   max-width: 402px;
-    // }
-    // @include media(600px) {
-    //   max-width: 418px;
-    // }
+    width: 100%;
     @include media {
       text-align: left;
-    //   max-width: 818px;
     }
-    // @include media(1280px) {
-    //   max-width: 1218px;
-    // }
   }
   &__title {
     margin-bottom: 100px;

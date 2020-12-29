@@ -27,14 +27,14 @@ document.addEventListener("DOMContentLoaded", () => {
     startAt: 0,
     perView: 3,
     gap: 30,
-    // autoplay: 4000,
+    autoplay: 4000,
     breakpoints: {
-      1280: {
+      1279: {
         perView: 2,
       },
-      1024: {
+      1023: {
         perView: 1
-      }
+      },
     }
   }).mount();
   new Glide(".header-glide", {

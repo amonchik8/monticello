@@ -6,7 +6,6 @@
     direction: rtl;
   }
   &__wrapper {
-
   }
   &__track {
     overflow: hidden;
@@ -96,20 +95,32 @@
   }
   &__arrow--left {
     left: 0;
-    @include media(600px) {
-      left: -25%;
+    @include media(1280px) {
+      left: -3.7%;
     }
-    @include media {
-      left: -8%;
+    @include media(1330px) {
+      left: -5%;
+    }
+    @include media(1430px) {
+      left: -7%;
+    }
+    @include media(1480px) {
+      left: -9%;
     }
   }
   &__arrow--right {
     right: 0;
-    @include media(600px) {
-      right: -25%;
+    @include media(1280px) {
+      right: -3.7%;
     }
-    @include media {
-      right: -8%;
+    @include media(1330px) {
+      right: -5%;
+    }
+    @include media(1430px) {
+      right: -7%;
+    }
+    @include media(1480px) {
+      right: -9%;
     }
   }
   &__arrow--disabled {
