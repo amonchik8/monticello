@@ -1,62 +1,60 @@
 .card {
   background-color: $WHITE;
-  @include hover {
-    .card__hover {
-      opacity: 1;
-    }
+  width: 254px;
+  @include media(370px) {
+    width: 300px;
+  }
+  @include media(420px) {
+    width: 340px;
+  }
+  @include media(500px) {
+    width: 100%;
   }
   &__image {
+    display: flex;
     position: relative;
     z-index: 1;
-  }
-  &__hover {
-    position: absolute;
-    @include size(80px);
-    border: 1px solid $WHITE;
-    border-radius: 50%;
-    top: 15%;
-    left: 30.8%;
-    z-index: 10;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    &:after {
-      content: "+";
-      font-size: 40px;
-      position: absolute;
-      display: block;
-      color: $WHITE;
-      top: 15px;
-      right: 27px;
-    }
+    width: 100%;
+    height: 100%;
+    max-width: 370px;
+    max-height: 240px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    background-color: red;
   }
   &__inner {
-    padding: 30px 30px 30px 20px;
-    @media screen and (max-width: 600px ) {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      }
+    padding: 25px 30px 30px 20px;
   }
   &__title {
     @include text($H22, 700, $TITLE-COLOR);
     font-family: $BASE-FONT;
     text-transform: uppercase;
-    margin-bottom: 20px;
-    line-height: 1.5;
-    @media screen and (max-width: 600px ) {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    margin-bottom: 10px;
+    line-height: 1.7;
+    max-width: 320px;
+    @media screen and (max-width: 600px) {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
   &__description {
     @include text($H18, 400, $BASE-FONT-COLOR);
-    font-family: "Open Sans", sans-serif;
+    font-family: $SECONDARY-FONT;
     line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 320px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   &__avatar-inner {
     @include flex(flex-start, center, row);
-    margin-top: 35px;
   }
   &__avatar-image {
     margin-right: 20px;

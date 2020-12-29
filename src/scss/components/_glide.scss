@@ -1,9 +1,12 @@
 .glide {
   position: relative;
-  width: 100%;
   box-sizing: border-box;
+  width: 100%;
   &--rtl {
     direction: rtl;
+  }
+  &__wrapper {
+
   }
   &__track {
     overflow: hidden;
@@ -94,19 +97,19 @@
   &__arrow--left {
     left: 0;
     @include media(600px) {
-      left: -6em;
+      left: -25%;
     }
     @include media {
-      left: -7em;
+      left: -8%;
     }
   }
   &__arrow--right {
     right: 0;
     @include media(600px) {
-      right: -6em;
+      right: -25%;
     }
     @include media {
-      right: -7em;
+      right: -8%;
     }
   }
   &__arrow--disabled {

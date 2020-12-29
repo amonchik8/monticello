@@ -4,86 +4,72 @@
   @include media {
     @include flex(center, center, row);
     text-align: left;
+    width: 100%;
+    max-width: 1172px;
+    margin: 0 auto;
   }
-  position: relative;
-  z-index: 20;
   &:not(:last-child) {
     margin-bottom: 40px;
     @include media {
       margin-bottom: 210px;
     }
   }
+  &__image-wrapper {
+    @include media {
+      width: 50%;
+      padding-bottom: 39%;
+      position: relative;
+      &:nth-child(odd) {
+        margin-right: 70px;
+        &:after {
+          content: "";
+          position: absolute;
+          background-color: $BLUE;
+          display: block;
+          width: 100%;
+          width: 1000px;
+          height: 100%;
+          z-index: 0;
+          right: 40%;
+          top: -70px;
+        }
+      }
+      &:nth-child(even) {
+        &:after {
+          content: "";
+          position: absolute;
+          background-color: $PURPLE;
+          display: block;
+          width: 100%;
+          width: 1000px;
+          height: 100%;
+          z-index: 0;
+          left: 40%;
+          top: -70px;
+        }
+      }
+    }
+  }
   &__image {
+    z-index: 2;
     width: 100%;
-    height: 200px;
-    @include media(350px) {
-      width: 280px;
-      height: 210px;
-    }
-    @include media(420px) {
-      width: 350px;
-      height: 280px;
-    }
-    @include media(500px) {
-      width: 430px;
-      height: 330px;
-    }
-    @include media(590px) {
-      width: 520px;
-      height: 370px;
-    }
-    @include media(710px) {
-      width: 630px;
-      height: 470px;
-    }
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    background-color: white;
     margin-bottom: 50px;
     @include media {
+      position: absolute;
       margin-bottom: 0;
     }
-    &:nth-child(odd) {
-      background-image: url("../assets/images/whatwedoTradeCentreImage.png");
-      margin-right: 0;
-      @include media {
+  }
+  &__content {
+    @include media {
+      &:nth-child(odd) {
         margin-right: 70px;
-      }
-      &:after {
-        content: "";
-        position: absolute;
-        z-index: -10;
-        width: 585px;
-        height: 470px;
-        background-color: $BLUE;
-        top: -15%;
-        left: -20%;
-        display: none;
-        @include media {
-          display: block;
-        }
-      }
-    }
-    &:nth-child(even) {
-      background-image: url("../assets/images/whatwedoComerceCentreImage.png");
-      margin-left: 0;
-      @include media {
-        margin-left: 70px;
-      }
-      &:after {
-        content: "";
-        position: absolute;
-        z-index: -10;
-        width: 585px;
-        height: 470px;
-        background-color: $PURPLE;
-        top: -15%;
-        right: -17%;
-        display: none;
-        @include media {
-          display: block;
-        }
       }
     }
   }
@@ -103,14 +89,14 @@
   }
   &__description {
     @include text($H18, 400, $BASE-FONT-COLOR);
-    font-family: "Open Sans", sans-serif;
+    font-family: $BASE-FONT;
     max-width: 456px;
     margin-bottom: 35px;
     line-height: 1.6;
   }
   &__link {
     @include text($H18, 300, $TITLE-COLOR);
-    font-family: "Open Sans", sans-serif;
+    font-family: $HATCH-FONT;
     font-style: italic;
     margin-bottom: 40px;
     @include media {

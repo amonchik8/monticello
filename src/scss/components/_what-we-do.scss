@@ -4,6 +4,9 @@
   @include flex(center, center, column);
   &__container {
     @include media {
+      @include flex(center, stretch, column);
+      overflow: hidden;
+      width: 100%;
       padding: 140px 24px 140px;
     }
     padding: 100px 24px 100px;

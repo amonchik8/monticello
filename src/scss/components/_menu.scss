@@ -1,7 +1,7 @@
 .menu {
   display: none;
   @include media {
-    display: block;
+    @include flex(flex-start, center);
   }
   font-family: $SECONDARY-FONT;
   &__item {

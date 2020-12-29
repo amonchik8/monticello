@@ -3,7 +3,7 @@ name: HTML Validation
 on:
   push:
     branches:
-      - master
+      - gh-pages
 
 jobs:
   build:
@@ -18,4 +18,4 @@ jobs:
       - name: Validationg HTML5 🔍
         uses: Cyb3r-Jak3/html5validator-action@v0.4.2
         with:
-          root: ./dist
+          root: ./
