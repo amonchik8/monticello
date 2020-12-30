@@ -2,6 +2,21 @@
 @import './core/mixins';
 @import './core/common';
 
+@keyframes swipe {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100vw);
+    }
+}
+
+.swipe-animation {
+    animation-name: swipe;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
 
 @import './components/header';

@@ -55,12 +55,12 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     }
   }).mount();
-  new Glide(".header-glide", {
-    type: "carousel",
-    startAt: 0,
-    perView: 1,
-    autoplay: 4000,
-  }).mount();
+  // new Glide(".header-glide", {
+  //   type: "carousel",
+  //   startAt: 0,
+  //   perView: 1,
+  //   autoplay: 4000,
+  // }).mount();
 
   installMap();
 });

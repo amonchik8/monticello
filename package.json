@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@glidejs/glide": "^3.4.1",
+    "animate.css": "^4.1.1",
     "assets": "^3.0.1"
   }
 }
