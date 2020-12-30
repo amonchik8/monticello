@@ -12,6 +12,7 @@
     @include flex(space-between, center, column);
     &--scroll {
       @include flex(flex-end, flex-end, column);
+      padding: 0 24px 50px;
     }
   }
   &__title-wrapper {

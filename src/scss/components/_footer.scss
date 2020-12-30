@@ -7,19 +7,25 @@
   background-size: cover;
   @include flex(center, center, column);
   &__container {
-    @include media(357px) {
-      padding: 520px 24px 150px;
+    @include media(335px) {
+      padding: 380px 24px 50px;
     }
-    @include media(426px) {
-      padding: 460px 24px 170px;
+    @include media(339px) {
+      padding: 350px 24px 50px;
     }
     @include media(570px) {
-      padding: 450px 24px 190px;
+      padding: 380px 24px 50px;
+    }
+    @include media(645px) {
+      padding: 250px 24px 50px;
     }
     @include media(736px) {
+      padding: 180px 24px 50px;
+    }
+    @include media {
       padding: 200px 24px 210px;
     }
-    padding: 570px 24px 120px;
+    padding: 400px 24px 50px;
     max-width: 772px;
     width: 100%;
   }
@@ -32,11 +38,5 @@
   &__logo {
     margin-right: 0;
     margin-bottom: 40px;
-  }
-  &__social {
-    margin-bottom: 30px;
-    @include media(570px) {
-      margin-bottom: 0;
-    }
   }
 }

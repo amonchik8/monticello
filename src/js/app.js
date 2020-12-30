@@ -1,4 +1,21 @@
 import Glide from "@glidejs/glide";
+import markerImage from '/assets/images/marker.png'; 
+
+const isEmailValid = (value) => {
+  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/g;
+  return re.test(value);
+};
+
+const feedbackForm = document.forms.feedback;
+feedbackForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const email = feedbackForm.email.value;
+  const data = new FormData(feedbackForm);
+  if (isEmailValid(email)) {
+    fetch('http://server.com', {method: 'POST', body: data}).then()
+  feedbackForm.reset();
+  };
+});
 
 const installMap = () => {
   const mymap = L.map("mapid").setView([40.6636, -73.8895], 13);
@@ -11,13 +28,14 @@ const installMap = () => {
       zoomOffset: -1,
     }
   ).addTo(mymap);
+
   const myIcon = L.icon({
-    iconUrl: 'marker.png',
+    iconUrl: markerImage,
     iconAnchor: [22, 94],
     popupAnchor: [-3, -76],
     shadowSize: [68, 95],
     shadowAnchor: [22, 94]
-});
+  });
   const marker = L.marker([40.6765, -73.9055], {icon: myIcon}).addTo(mymap);
 };
 

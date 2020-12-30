@@ -3,7 +3,10 @@
   grid-template-rows: repeat(5, 1fr);
   grid-template-columns: 1fr;
   grid-gap: 10px;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
+  @include media {
+    margin-bottom: 60px;
+  }
   justify-items: stretch;
   align-items: stretch;
   @include media {

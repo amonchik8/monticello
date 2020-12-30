@@ -9,13 +9,17 @@
     margin: 0 auto;
   }
   &:not(:last-child) {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     @include media {
       margin-bottom: 210px;
     }
   }
   &__image-wrapper {
+    &:nth-child(odd) {
+      margin-bottom: 20px;
+    }
     @include media {
+      margin-bottom: 0;
       width: 50%;
       padding-bottom: 39%;
       position: relative;
@@ -60,7 +64,6 @@
     bottom: 0;
     object-fit: cover;
     background-color: white;
-    margin-bottom: 50px;
     @include media {
       position: absolute;
       margin-bottom: 0;
@@ -85,20 +88,26 @@
     }
     text-transform: uppercase;
     font-family: $BASE-FONT;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
+    @include media {
+      margin-bottom: 40px;
+    }
   }
   &__description {
     @include text($H18, 400, $BASE-FONT-COLOR);
     font-family: $BASE-FONT;
     max-width: 456px;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
+    @include media {
+      margin-bottom: 35px;
+    }
     line-height: 1.6;
   }
   &__link {
     @include text($H18, 300, $TITLE-COLOR);
     font-family: $HATCH-FONT;
     font-style: italic;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     @include media {
       margin-bottom: 0;
     }

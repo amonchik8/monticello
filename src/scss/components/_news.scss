@@ -5,14 +5,18 @@
   background-size: cover;
   @include flex(center, center, column);
   &__container {
-    padding: 140px 24px 210px;
+    padding: 50px 24px 120px;
     width: 100%;
     @include media {
       text-align: left;
+      padding: 140px 24px 210px;
     }
   }
   &__title {
-    margin-bottom: 100px;
+    margin-bottom: 30px;
+    @include media {
+      margin-bottom: 100px;
+    }
     color: $WHITE;
     @include flex(center, center, column);
     &:after {

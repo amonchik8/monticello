@@ -12,14 +12,20 @@
     text-align: left;
     top: -64%;
   }
-  padding: 90px 60px 80px 60px;
+  @include media {
+    padding: 90px 60px 80px 60px;
+  }
+  padding: 50px 24px 50px 24px;
   &__title {
     @include text($H44, 500, $TITLE-COLOR);
     font-family: $BASE-FONT;
-    margin-bottom: 60px;
+    @include media {
+      margin-bottom: 60px;
+    }
+    margin-bottom: 20px;
   }
   &__main {
-    @include flex(center, flex-start, row, wrap);
+    @include flex(space-around, flex-start, row, wrap);
     @include media(736px) {
       @include flex(space-between, flex-start, row, wrap);
     }

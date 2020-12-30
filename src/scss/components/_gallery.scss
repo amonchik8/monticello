@@ -2,11 +2,14 @@
   @include flex(center, center, column, wrap);
   &__container {
     @include flex(center, center, column, wrap);
-    padding: 140px 24px;
+    @include media {
+      padding: 140px 24px;
+    }
+    padding: 50px 24px;
   }
   &__title {
-    margin-bottom: 50px;
-    @include media(420px) {
+    margin-bottom: 20px;
+    @include media {
       margin-bottom: 100px;
     }
   }

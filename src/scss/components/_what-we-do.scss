@@ -9,11 +9,11 @@
       width: 100%;
       padding: 140px 24px 140px;
     }
-    padding: 100px 24px 100px;
+    padding: 50px 24px 50px;
     @include flex(center, center, column);
   }
   &__title {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     @include media {
       margin-bottom: 170px;
     }
