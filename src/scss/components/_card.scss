@@ -2,10 +2,18 @@
   background-color: $WHITE;
   width: 100%;
   max-width: 370px;
+  border-radius: 5px;
+  @include media {
+    border-radius: 0;
+  }
   &__wrapper {
     @include flex(center, center);
   }
   &__image {
+    border-radius: 5px;
+    @include media {
+      border-radius: 0;
+    }
     display: flex;
     position: relative;
     z-index: 1;
@@ -61,6 +69,11 @@
     font-family: $SECONDARY-FONT;
     text-transform: uppercase;
     margin-bottom: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   &__avatar-date {
     @include text($H14, 400, $BLUE);
